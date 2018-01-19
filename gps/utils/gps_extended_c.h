@@ -1238,6 +1238,53 @@ typedef struct
     Gnss_Srn_MacAddr_Type  macAddrType; /* SRN AP MAC Address type */
 } GnssSrnDataReq;
 
+/*
+ * Represents the status of AGNSS augmented to support IPv4.
+ */
+struct AGnssExtStatusIpV4 {
+    AGpsExtType type;
+    LocAGpsStatusValue status;
+    /*
+     * 32-bit IPv4 address.
+     */
+    uint32_t ipV4Addr;
+};
+
+/*
+ * Represents the status of AGNSS augmented to support IPv6.
+ */
+struct AGnssExtStatusIpV6 {
+    AGpsExtType type;
+    LocAGpsStatusValue status;
+    /*
+     * 128-bit IPv6 address.
+     */
+    uint8_t ipV6Addr[16];
+};
+
+/*
+ * Callback with AGNSS(IpV4) status information.
+ *
+ * @param status Will be of type AGnssExtStatusIpV4.
+ */
+typedef void (*AgnssStatusIpV4Cb)(AGnssExtStatusIpV4 status);
+
+/*
+ * Callback with AGNSS(IpV6) status information.
+ *
+ * @param status Will be of type AGnssExtStatusIpV6.
+ */
+typedef void (*AgnssStatusIpV6Cb)(AGnssExtStatusIpV6 status);
+
+/* Constructs for interaction with loc_net_iface library */
+typedef void (*LocAgpsOpenResultCb)(bool isSuccess, AGpsExtType agpsType, const char* apn,
+        AGpsBearerType bearerType, void* userDataPtr);
+
+typedef void (*LocAgpsCloseResultCb)(bool isSuccess, AGpsExtType agpsType, void* userDataPtr);
+
+/* Shared resources of LocIpc */
+#define LOC_IPC_HAL "/dev/socket/location/socket_hal"
+#define LOC_IPC_XTRA "/dev/socket/location/xtra/socket_xtra"
 
 #ifdef __cplusplus
 }
