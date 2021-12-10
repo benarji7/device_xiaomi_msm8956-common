@@ -173,6 +173,7 @@ public:
 
     virtual int32_t start();
     virtual int32_t initialize(cam_is_type_t isType);
+    using QCamera3ProcessingChannel::request;
     virtual int32_t request(buffer_handle_t *buffer, uint32_t frameNumber);
     virtual void streamCbRoutine(mm_camera_super_buf_t *super_frame,
                                             QCamera3Stream *stream);
