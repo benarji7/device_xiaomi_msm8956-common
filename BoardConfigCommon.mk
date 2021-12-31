@@ -49,7 +49,10 @@ TARGET_NO_BOOTLOADER := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 ramoops_memreserve=4M
-#BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+
+
+
+
 BOARD_KERNEL_CMDLINE += console=tty0
 BOARD_KERNEL_CMDLINE += apparmor=1 security=apparmor
 BOARD_KERNEL_BASE := 0x80000000
@@ -230,6 +233,9 @@ USE_DEVICE_SPECIFIC_THERMAL := true
 
 # Vr
 USE_DEVICE_SPECIFIC_VR := true
+
+# DATA_IPA_CFG_MGR
+USE_DEVICE_SPECIFIC_DATA_IPA_CFG_MGR := true
 
 # Treble
 BOARD_VNDK_RUNTIME_DISABLE := true
