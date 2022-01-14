@@ -175,7 +175,7 @@ vendor/lib64/libgeofence.so
 vendor/lib64/libizat_client_api.so
 vendor/lib64/libizat_core.so
 vendor/lib64/liblbs_core.so
-vendor/lib64/libloc_api_v02.so
+-vendor/lib64/libloc_api_v02.so
 vendor/lib64/libloc_ds_api.so
 vendor/lib64/liblocationservice.so
 vendor/lib64/liblocationservice_glue.so
@@ -536,8 +536,8 @@ vendor/lib64/libthermalioctl.so
 
 # Time services
 vendor/bin/time_daemon
-vendor/lib/libtime_genoff.so
-vendor/lib64/libtime_genoff.so
+-vendor/lib/libtime_genoff.so
+-vendor/lib64/libtime_genoff.so
 
 # Widevine
 vendor/bin/hw/android.hardware.drm@1.1-service.widevine
