@@ -112,9 +112,6 @@ vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
 vendor/lib64/vendor.qti.latency@2.0.so
 
-# Consumer IR
-vendor/lib64/hw/consumerir.default.so
-
 # DPM
 bin/dpmd
 etc/dpm/dpm.conf
